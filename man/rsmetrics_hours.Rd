@@ -7,8 +7,11 @@
 rsmetrics_hours(from = "31d", until = "0d", interval = "1d")
 }
 \arguments{
-\item{from, until, interval}{Date range starting timestamp (Unix timestamp or
+\item{from, until}{Date range starting timestamp (Unix timestamp or
 relative time delta such as "2d" or "3w").}
+
+\item{interval}{Summarization interval. Data points at intervals less then
+this will be grouped. (Relative time delta e.g. "120s" or "1h" or "30d").}
 }
 \value{
 A tibble containing the usage statistics, with the timestamp column

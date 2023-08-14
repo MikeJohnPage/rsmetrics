@@ -4,9 +4,12 @@
 #' specified time range. It returns the data as a tibble with timestamps
 #' converted to the `POSIXct` format.
 #'
-#' @param from,until,interval Date range starting timestamp (Unix timestamp or
+#' @param from,until Date range starting timestamp (Unix timestamp or
 #'  relative time delta such as "2d" or "3w").
-
+#' 
+#' @param interval Summarization interval. Data points at intervals less then
+#'  this will be grouped. (Relative time delta e.g. "120s" or "1h" or "30d").
+#' 
 #' @return A tibble containing the usage statistics, with the timestamp column
 #' 
 #' converted to a `POSIXct` object.
